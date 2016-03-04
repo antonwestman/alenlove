@@ -42,8 +42,6 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
       }
     }
   })
-
-
   .state('tab.info', {
     url: '/info',
     views: {
