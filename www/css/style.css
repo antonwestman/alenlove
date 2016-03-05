@@ -13,3 +13,8 @@
   color: hsl(0, 100%, 100%);
   font-size: larger;
 }
+
+.map{
+  width: 80%;
+  margin: 10px 10%;
+}
