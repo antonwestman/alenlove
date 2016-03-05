@@ -18,10 +18,6 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -34,20 +30,33 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
   // Each tab has its own nav history stack:
 
   .state('tab.home', {
-    url: '/',
+    url: '/home',
     views: {
       'tab-home': {
         templateUrl: 'templates/tab-home.html',
-        controller: 'HomeCtrl'
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       }
     }
   })
+  .state('tab.rsvp', {
+    url: '/rsvp',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/rsvp.html',
+        controller: 'RSVPCtrl',
+        controllerAs: 'rsvp'
+      }
+    }
+  })
+
   .state('tab.info', {
     url: '/info',
     views: {
       'tab-info': {
         templateUrl: 'templates/tab-info.html',
-        controller: 'InfoCtrl'
+        controller: 'InfoCtrl',
+        controllerAs: 'info'
       }
     }
   })
@@ -57,7 +66,8 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
     views: {
       'tab-transport': {
         templateUrl: 'templates/tab-transport.html',
-        controller: 'TransportCtrl'
+        controller: 'TransportCtrl',
+        controllerAs: 'transport'
       }
     }
   })
@@ -67,12 +77,14 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
     views: {
       'tab-sleep-over': {
         templateUrl: 'templates/tab-sleep-over.html',
-        controller: 'SleepOverCtrl'
+        controller: 'SleepOverCtrl',
+        controllerAs: 'sleepOver'
+
       }
     }
-  });
+  })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
 
 });

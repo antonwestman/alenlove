@@ -1,0 +1,36 @@
+<ion-view view-title="OSA">
+  <ion-content>
+    <form name="rsvpForm" ng-submit="rsvp.send()">
+    <div class="item item-divider">
+        Kommer du eller?
+      </div>
+    <ion-radio name="attending" ng-model="rsvp.form.attending" ng-value="'true'">Klart jag kommer</ion-radio>
+    <ion-radio name="attending" ng-model="rsvp.form.attending" ng-value="'false'">Nej, jag bangar</ion-radio>
+    <div class="list">
+     <div ng-if="rsvp.form.attending">
+        <div class="item item-divider">
+          Vem är du?
+          </div>
+        <label class="item item-input">
+          <input ng-model="rsvp.form.name" type="text" placeholder="Namn">
+        </label>
+        <div ng-if="rsvp.form.attending == 'true'">
+          <div class="item item-divider">
+            Hur kinkig är du gällande käk?
+            </div>
+          <label class="item item-input">
+            <input ng-model="rsvp.form.foodPref" type="text" placeholder="Matpreferenser">
+          </label>
+          <div class="item item-divider">
+            Vill du åka buss?
+            </div>
+          <ion-radio name="bus" ng-model="rsvp.form.bus" ng-value="'true'">Ja, jag värnar om miljön.</ion-radio>
+          <ion-radio name ="bus" ng-model="rsvp.form.bus" ng-value="'false'">Nej. Jag är en miljöbov.</ion-radio>
+       </div>
+       <button ng-if="rsvp.formIsValid()" type="submit" class="button button-full button-positive">
+         Skicka in
+       </button>
+        </div>
+      </form>
+  </ion-content>
+</ion-view>

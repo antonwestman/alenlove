@@ -1,9 +1,24 @@
 angular.module('alenlove.controllers', [])
 
-.controller('HomeCtrl', function($scope) {})
+.controller('HomeCtrl', function() {})
 
-.controller('TransportCtrl', function($scope) {})
+.controller('RSVPCtrl', function() {
+  vm = this
+  vm.form = {};
 
-.controller('InfoCtrl', function($scope) {})
+  vm.formIsValid = function() {
+    if (vm.form.attending == 'true'){
+      return vm.form.attending && vm.form.name && vm.form.bus
+    } else {
+      return vm.form.attending && vm.form.name
+    };
+  };
 
-.controller('SleepOverCtrl', function($scope) {});
+  vm.send = function() {};
+})
+
+.controller('TransportCtrl', function() {})
+
+.controller('InfoCtrl', function() {})
+
+.controller('SleepOverCtrl', function() {});
