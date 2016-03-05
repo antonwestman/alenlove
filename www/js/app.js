@@ -1,4 +1,4 @@
-angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'])
+angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services', 'timer'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

@@ -1,6 +1,15 @@
 /* Empty. Add your own CSS if you like */
 
-.item-img.img {
+.item-img {
   height: 300px;
   width:auto;
+}
+
+#imageCountDown {
+  background: url("../img/alenlove_heart.jpg") 50% no-repeat;
+  background-size: contain;
+  height: 350px;
+  padding-top: 130px;
+  color: hsl(0, 100%, 100%);
+  font-size: larger;
 }
