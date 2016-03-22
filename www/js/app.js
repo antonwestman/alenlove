@@ -17,7 +17,6 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -57,29 +56,6 @@ angular.module('alenlove', ['ionic', 'alenlove.controllers', 'alenlove.services'
         templateUrl: 'templates/tab-info.html',
         controller: 'InfoCtrl',
         controllerAs: 'info'
-      }
-    }
-  })
-
-  .state('tab.transport', {
-    url: '/transport',
-    views: {
-      'tab-transport': {
-        templateUrl: 'templates/tab-transport.html',
-        controller: 'TransportCtrl',
-        controllerAs: 'transport'
-      }
-    }
-  })
-
-  .state('tab.sleep-over', {
-    url: '/sleep-over',
-    views: {
-      'tab-sleep-over': {
-        templateUrl: 'templates/tab-sleep-over.html',
-        controller: 'SleepOverCtrl',
-        controllerAs: 'sleepOver'
-
       }
     }
   })
